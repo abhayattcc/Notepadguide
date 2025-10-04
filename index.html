@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Notepad Tutorial - Fun Guide for Writing & Drawing!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            background: #ff69b4;
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .lang-switch {
+            margin-top: 10px;
+        }
+        .lang-switch button {
+            background: #fff;
+            color: #ff69b4;
+            border: 2px solid #ff1493;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 5px;
+            transition: background 0.3s;
+        }
+        .lang-switch button.active {
+            background: #ff1493;
+            color: white;
+        }
+        .lang-switch button:hover {
+            background: #db7093;
+            color: white;
+        }
+        section {
+            background: white;
+            margin: 20px 0;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        details {
+            margin: 10px 0;
+            border: 2px solid #ffd700;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        details[open] {
+            background: #fffacd;
+        }
+        summary {
+            background: #7fffd4;
+            padding: 15px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #20b2aa;
+            cursor: pointer;
+            border-radius: 10px;
+            list-style: none;
+            transition: background 0.3s;
+        }
+        summary:hover {
+            background: #40e0d0;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        details p {
+            padding: 15px;
+            margin: 0;
+            background: white;
+            border-radius: 0 0 15px 15px;
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #ff69b4;
+            color: white;
+            border-radius: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span class="emoji">📝🎨</span>Kids Notepad Tutorial<span class="emoji">📝🎨</span></h1>
+        <p>Learn to write stories and draw amazing art! Fun for kids!</p>
+        <div class="lang-switch">
+            <button onclick="switchLang('en')" class="active">English</button>
+            <button onclick="switchLang('odia')">ଓଡ଼ିଆ</button>
+        </div>
+    </header>
+
+    <section id="intro">
+        <h2><span class="emoji">🚀</span>Introduction</h2>
+        <details>
+            <summary>What is Kids Notepad?</summary>
+            <div id="intro-en">
+                <p>Kids Notepad is a super fun app for writing notes and drawing pictures! It works on phones, tablets, or computers. No need to install – just open the HTML file in your browser. It saves your work automatically so you never lose your creations!</p>
+            </div>
+            <div id="intro-odia" class="hidden">
+                <p>କିଡ୍ସ ନୋଟପ୍ୟାଡ୍ ହେଉଛି ନୋଟ୍ ଲେଖିବା ଓ ଚିତ୍ର ଆଙ୍କିବା ପାଇଁ ଏକ ମଜାଦାର ଆପ୍। ଏହା ଫୋନ୍, ଟାବ୍ଲେଟ୍ କିମ୍ବା କମ୍ପ୍ୟୁଟରରେ କାମ କରେ। ଇନ୍ଷ୍ଟଲ୍ କରିବାର ଆବଶ୍ୟକତା ନାହିଁ – କେବଳ HTML ଫାଇଲ୍କୁ ବ୍ରାଉଜରରେ ଖୋଲନ୍ତୁ। ଏହା ଆପଣଙ୍କ କାମକୁ ସ୍ୱୟଂଚାଳିତ ଭାବେ ସେଭ୍ କରେ, ତେଣୁ ଆପଣଙ୍କ ସୃଷ୍ଟି ହଜିଯାଏ ନାହିଁ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>All Features in the App</summary>
+            <div id="features-en">
+                <ul>
+                    <li><strong>Text Writing:</strong> Undo/Redo, Find & Replace, Select All, Copy, Erase, Save/Load/Delete texts, Open TXT/PDF files, Export TXT.</li>
+                    <li><strong>Drawing:</strong> Draw with pen, Erase, Bucket Fill, Shapes (Circle/Rect/Triangle), Multi-page, Undo/Redo, Save JPG, Share PDF, Lock view.</li>
+                    <li><strong>Gestures:</strong> 1 finger: Draw, 2: Erase, 3: Undo, 4: Random Color, 5+: Lock.</li>
+                    <li><strong>PDF Support:</strong> Draw on PDF pages, Extract text from PDF.</li>
+                    <li><strong>Other:</strong> Tooltips, Progress bar, Auto-save, Trash for deleted texts (restore in 60 days).</li>
+                </ul>
+            </div>
+            <div id="features-odia" class="hidden">
+                <ul>
+                    <li><strong>ଟେକ୍ସଟ୍ ଲେଖା:</strong> Undo/Redo, Find & Replace, Select All, Copy, Erase, Save/Load/Delete texts, Open TXT/PDF files, Export TXT.</li>
+                    <li><strong>ଆଙ୍କିବା:</strong> ପେନ୍ ସହିତ ଆଙ୍କନ୍ତୁ, Erase, Bucket Fill, Shapes (Circle/Rect/Triangle), Multi-page, Undo/Redo, Save JPG, Share PDF, Lock view.</li>
+                    <li><strong>ଜେସ୍ଚର୍:</strong> 1 finger: Draw, 2: Erase, 3: Undo, 4: Random Color, 5+: Lock.</li>
+                    <li><strong>PDF ସହାୟତା:</strong> PDF ପେଜ୍ ଉପରେ ଆଙ୍କନ୍ତୁ, PDFରୁ ଟେକ୍ସଟ୍ ଏକ୍ସଟ୍ରାକ୍ଟ୍ କରନ୍ତୁ।</li>
+                    <li><strong>ଅନ୍ୟ:</strong> Tooltips, Progress bar, Auto-save, Trash for deleted texts (restore in 60 days).</li>
+                </ul>
+            </div>
+        </details>
+    </section>
+
+    <section id="getting-started">
+        <h2><span class="emoji">🎉</span>Getting Started</h2>
+        <details>
+            <summary>Step 1: Open the App</summary>
+            <div id="step1-en">
+                <p>Save the HTML code as "kids-notepad.html" and open it in your web browser (like Chrome). You'll see pink tabs: "📝 Write" and "🎨 Draw". Start with Write!</p>
+            </div>
+            <div id="step1-odia" class="hidden">
+                <p>HTML କୋଡ୍କୁ "kids-notepad.html" ନାମରେ ସେଭ୍ କରନ୍ତୁ ଏବଂ ଆପଣଙ୍କ ବ୍ରାଉଜରରେ (ଯେମିତି Chrome) ଖୋଲନ୍ତୁ। ଆପଣ ଗୁଲାପୀ ଟ୍ୟାବ୍ ଦେଖିବେ: "📝 Write" ଏବଂ "🎨 Draw"। Writeରୁ ଆରମ୍ଭ କରନ୍ତୁ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 2: Switch Tabs</summary>
+            <div id="step2-en">
+                <p>Click "📝 Write" for typing, or "🎨 Draw" for art. Click again to hide/show toolbar for full screen fun!</p>
+            </div>
+            <div id="step2-odia" class="hidden">
+                <p>"📝 Write"କୁ କ୍ଲିକ୍ କରନ୍ତୁ ଟାଇପିଂ ପାଇଁ, କିମ୍ବା "🎨 Draw" ଆର୍ଟ୍ ପାଇଁ। ଆହୁରି କ୍ଲିକ୍ କରନ୍ତୁ ଟୁଲ୍ବାର୍ ଲୁଚାଇଁ/ଦେଖାଇବା ପାଇଁ ଫୁଲ୍ ସ୍କ୍ରିନ୍ ମଜା ପାଇଁ!</p>
+            </div>
+        </details>
+    </section>
+
+    <section id="text-features">
+        <h2><span class="emoji">📝</span>Text Writing Features (Serial Order)</h2>
+        <details>
+            <summary>Step 3: Type Your Story</summary>
+            <div id="step3-en">
+                <p>In Write tab, just type in the big box! It auto-saves every few seconds. Use lined paper look for easy writing.</p>
+            </div>
+            <div id="step3-odia" class="hidden">
+                <p>Write ଟ୍ୟାବ୍ରେ, ବଡ଼ ବାକ୍ସରେ କେବଳ ଟାଇପ୍ କରନ୍ତୁ! ପ୍ରତି କିଛି ସେକେଣ୍ଡରେ ଏହା ସ୍ୱୟଂଚାଳିତ ସେଭ୍ କରେ। ସୁଗମ ଲେଖା ପାଇଁ ଲାଇନ୍ଡ୍ ପେପର୍ ଲୁକ୍ ବ୍ୟବହାର କରନ୍ତୁ।</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 4: Undo & Redo (↺ ↻)</summary>
+            <div id="step4-en">
+                <p>Made a mistake? Click ↺ to undo last change. Click ↻ to redo it. Saves up to 50 steps!</p>
+            </div>
+            <div id="step4-odia" class="hidden">
+                <p>ভୁଲ୍ ହୋଇଗଲା? ↺ କ୍ଲିକ୍ କରନ୍ତୁ ଶେଷ ପରିବର୍ତ୍ତନ Undo କରିବା ପାଇଁ। ↻ କ୍ଲିକ୍ କରନ୍ତୁ ଏହାକୁ ଆହୁରି କରିବା ପାଇଁ। 50 ପଦକ୍ଷେପ ସେଭ୍ କରେ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 5: Find & Replace (🔎)</summary>
+            <div id="step5-en">
+                <p>Click 🔎, type what to find, then what to replace. It changes all matches!</p>
+            </div>
+            <div id="step5-odia" class="hidden">
+                <p>🔎 କ୍ଲିକ୍ କରନ୍ତୁ, କଣ ଖୋଜିବା ଟାଇପ୍ କରନ୍ତୁ, ପରେ କଣ ରିପ୍ଲେସ୍ କରିବା। ସବୁ ମ୍ୟାଚ୍ ପରିବର୍ତ୍ତନ କରେ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 6: Select All & Copy (📄 📋)</summary>
+            <div id="step6-en">
+                <p>Click 📄 to select everything. Click 📋 to copy to clipboard – paste anywhere!</p>
+            </div>
+            <div id="step6-odia" class="hidden">
+                <p>📄 କ୍ଲିକ୍ କରନ୍ତୁ ସବୁ ସିଲେକ୍ଟ୍ କରିବା ପାଇଁ। 📋 କ୍ଲିକ୍ କରନ୍ତୁ କ୍ଲିପ୍ବୋର୍ଡ୍ରେ କପି କରିବା – ଯେଉଁଠାରେ ଚାହାଁନ୍ତୁ ପେଷ୍ଟ୍ କରନ୍ତୁ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 7: Erase Text (🧹)</summary>
+            <div id="step7-en">
+                <p>Click 🧹 to clear everything. Start fresh!</p>
+            </div>
+            <div id="step7-odia" class="hidden">
+                <p>🧹 କ୍ଲିକ୍ କରନ୍ତୁ ସବୁ ମାରିବା ପାଇଁ। ନୂଆ ଆରମ୍ଭ କରନ୍ତୁ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 8: Save Text (💾)</summary>
+            <div id="step8-en">
+                <p>Click 💾 to save your story. It gives an ID – remember it! Auto-saves current work too.</p>
+            </div>
+            <div id="step8-odia" class="hidden">
+                <p>💾 କ୍ଲିକ୍ କରନ୍ତୁ ଆପଣଙ୍କ କାହାଣୀ ସେଭ୍ କରିବା ପାଇଁ। ଏହା ଏକ ID ଦେଇଥାଏ – ଏହାକୁ ମନେ ରଖନ୍ତୁ! ପ୍ରସ୍ତୁତ କାମ ମଧ୍ୟ ସ୍ୱୟଂଚାଳିତ ସେଭ୍ ହୁଏ।</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 9: Show Saved Texts (📚)</summary>
+            <div id="step9-en">
+                <p>Click 📚 to see all saved stories. Click one to load it back!</p>
+            </div>
+            <div id="step9-odia" class="hidden">
+                <p>📚 କ୍ଲିକ୍ କରନ୍ତୁ ସବୁ ସେଭ୍ ହୋଇଥିବା କାହାଣୀ ଦେଖିବା ପାଇଁ। ଏକଟିକୁ କ୍ଲିକ୍ କରନ୍ତୁ ଏହାକୁ ପୁନର୍ବାର ଲୋଡ୍ କରିବା ପାଇଁ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 10: Delete Saved Text (🗑️)</summary>
+            <div id="step10-en">
+                <p>Click 🗑️ to move to trash. View trash in Restore. Items stay 60 days!</p>
+            </div>
+            <div id="step10-odia" class="hidden">
+                <p>🗑️ କ୍ଲିକ୍ କରନ୍ତୁ ଟ୍ରାସ୍ବେ ସ୍ଥାନାନ୍ତର କରିବା ପାଇଁ। Restoreରେ ଟ୍ରାସ୍ ଦେଖନ୍ତୁ। ଆଇଟମ୍ 60 ଦିନ ରହେ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 11: Restore from Trash (🔄)</summary>
+            <div id="step11-en">
+                <p>Click 🔄 to see trash. Click item to restore if under 60 days.</p>
+            </div>
+            <div id="step11-odia" class="hidden">
+                <p>🔄 କ୍ଲିକ୍ କରନ୍ତୁ ଟ୍ରାସ୍ ଦେଖିବା ପାଇଁ। 60 ଦିନ ଭିତରେ ଥାଗିଥିଲେ ଆଇଟମ୍ କ୍ଲିକ୍ କରନ୍ତୁ ରିଷ୍ଟୋର୍ କରିବା ପାଇଁ।</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 12: Permanently Delete (🗑️🚫)</summary>
+            <div id="step12-en">
+                <p>Click 🗑️🚫 to empty trash forever. Be careful!</p>
+            </div>
+            <div id="step12-odia" class="hidden">
+                <p>🗑️🚫 କ୍ଲିକ୍ କରନ୍ତୁ ଟ୍ରାସ୍ ଚିରକାଳ ପାଇଁ ଖାଲି କରିବା ପାଇଁ। ସତର୍କ ରହନ୍ତୁ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 13: Open File (📜)</summary>
+            <div id="step13-en">
+                <p>Click 📜 to load TXT (for text) or PDF (for drawing on pages or extract text). Watch progress bar!</p>
+            </div>
+            <div id="step13-odia" class="hidden">
+                <p>📜 କ୍ଲିକ୍ କରନ୍ତୁ TXT (ଟେକ୍ସଟ୍ ପାଇଁ) କିମ୍ବା PDF (ପେଜ୍ ଉପରେ ଆଙ୍କିବା କିମ୍ବା ଟେକ୍ସଟ୍ ଏକ୍ସଟ୍ରାକ୍ଟ୍) ଲୋଡ୍ କରିବା ପାଇଁ। ପ୍ରୋଗ୍ରେସ୍ ବାର୍ ଦେଖନ୍ତୁ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 14: Export Text (📤)</summary>
+            <div id="step14-en">
+                <p>Click 📤 to download your text as .txt file. Share with friends!</p>
+            </div>
+            <div id="step14-odia" class="hidden">
+                <p>📤 କ୍ଲିକ୍ କରନ୍ତୁ ଆପଣଙ୍କ ଟେକ୍ସଟ୍କୁ .txt ଫାଇଲ୍ ଡାଉନଲୋଡ୍ କରିବା ପାଇଁ। ବନ୍ଧୁମାନଙ୍କ ସହ ସେୟାର୍ କରନ୍ତୁ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 15: Support Us (💰)</summary>
+            <div id="step15-en">
+                <p>Click 💰 to donate via UPI. Help make more fun apps!</p>
+            </div>
+            <div id="step15-odia" class="hidden">
+                <p>💰 କ୍ଲିକ୍ କରନ୍ତୁ UPI ମାଧ୍ୟମରେ ଡୋନେଟ୍ କରିବା ପାଇଁ। ଅଧିକ ମଜାଦାର ଆପ୍ ତିଆରି କରିବାରେ ସାହାଯ୍ୟ କରନ୍ତୁ!</p>
+            </div>
+        </details>
+    </section>
+
+    <section id="drawing-features">
+        <h2><span class="emoji">🎨</span>Drawing Features (Serial Order)</h2>
+        <details>
+            <summary>Step 16: Switch to Draw Tab</summary>
+            <div id="step16-en">
+                <p>Click "🎨 Draw". You'll see a white canvas. Use toolbar below!</p>
+            </div>
+            <div id="step16-odia" class="hidden">
+                <p>"🎨 Draw" କ୍ଲିକ୍ କରନ୍ତୁ। ଆପଣ ଧଳା କ୍ୟାନ୍ଭାସ୍ ଦେଖିବେ। ନିମ୍ନରେ ଟୁଲ୍ବାର୍ ବ୍ୟବହାର କରନ୍ତୁ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 17: Choose Pen Size & Color</summary>
+            <div id="step17-en">
+                <p>Select "normal" to "Ultra Thick" for pen width. Pick color from dropdown or color picker!</p>
+            </div>
+            <div id="step17-odia" class="hidden">
+                <p>ପେନ୍ ବେହଳ "normal"ରୁ "Ultra Thick" ନୂଆନ୍ତୁ। ଡ୍ରପ୍ଡାଉନ୍ରୁ କିମ୍ବା କଲର୍ ପିକର୍ରୁ କଲର୍ ଚୟନ୍ କରନ୍ତୁ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 18: Toggle Drawing (✍️)</summary>
+            <div id="step18-en">
+                <p>Click ✍️ to draw. Drag finger/mouse to make lines. Smooth curves!</p>
+            </div>
+            <div id="step18-odia" class="hidden">
+                <p>✍️ କ୍ଲିକ୍ କରନ୍ତୁ ଆଙ୍କିବା ପାଇଁ। ଆଙ୍ଗୁଳି/ମାଉସ୍ ଡ୍ରାଗ୍ କରନ୍ତୁ ଲାଇନ୍ ତିଆରି କରିବା ପାଇଁ। ସ୍ମୁଥ୍ କର୍ଭ୍!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 19: Eraser (🧹)</summary>
+            <div id="step19-en">
+                <p>Click 🧹 to erase. Drag to rub out. Or right-click mouse/2 fingers on touch.</p>
+            </div>
+            <div id="step19-odia" class="hidden">
+                <p>🧹 କ୍ଲିକ୍ କରନ୍ତୁ ମାରିବା ପାଇଁ। ଡ୍ରାଗ୍ କରନ୍ତୁ ରବ୍ ଆଉଟ୍। କିମ୍ବା ରାଇଟ୍-କ୍ଲିକ୍ ମାଉସ୍/2 ଆଙ୍ଗୁଳି ଟଚ୍।</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 20: Bucket Fill (🪣)</summary>
+            <div id="step20-en">
+                <p>Click 🪣, tap area to fill with color. Matches similar colors!</p>
+            </div>
+            <div id="step20-odia" class="hidden">
+                <p>🪣 କ୍ଲିକ୍ କରନ୍ତୁ, ଏରିଆ ଟ୍ୟାପ୍ କରନ୍ତୁ କଲର୍ରେ ଭରିବା ପାଇଁ। ସମାନ କଲର୍ ମ୍ୟାଚ୍ କରେ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 21: Shapes (⭕ ⬜ 🔺)</summary>
+            <div id="step21-en">
+                <p>Click a shape button, drag to draw circle/rect/triangle. Release to finish!</p>
+            </div>
+            <div id="step21-odia" class="hidden">
+                <p>ଏକ ଆକୃତି ବଟନ୍ କ୍ଲିକ୍ କରନ୍ତୁ, ଡ୍ରାଗ୍ କରନ୍ତୁ ସରକିଲ୍/ରେକ୍ଟ୍/ଟ୍ରାଏଙ୍ଗଲ୍ ଆଙ୍କିବା ପାଇଁ। ରିଲିଜ୍ କରନ୍ତୁ ଶେଷ କରିବା ପାଇଁ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 22: Undo & Redo (↺ ↻)</summary>
+            <div id="step22-en">
+                <p>Click ↺ to undo last stroke. ↻ to redo. Or 3 fingers on touch!</p>
+            </div>
+            <div id="step22-odia" class="hidden">
+                <p>↺ କ୍ଲିକ୍ କରନ୍ତୁ ଶେଷ ଷ୍ଟ୍ରୋକ୍ Undo କରିବା ପାଇଁ। ↻ ରିଡୁ କରିବା ପାଇଁ। କିମ୍ବା 3 ଆଙ୍ଗୁଳି ଟଚ୍!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 23: Lock View (🔒)</summary>
+            <div id="step23-en">
+                <p>Click 🔒 to protect drawing (view only). Or 5+ fingers on touch. Swipe left/right to change pages.</p>
+            </div>
+            <div id="step23-odia" class="hidden">
+                <p>🔒 କ୍ଲିକ୍ କରନ୍ତୁ ଆଙ୍କନ୍ତୁ ସୁରକ୍ଷିତ କରିବା (କେବଳ ଦେଖନ୍ତୁ)। କିମ୍ବା 5+ ଆଙ୍ଗୁଳି ଟଚ୍। ଲେଫ୍ଟ୍/ରାଇଟ୍ ସ୍ୱାଇପ୍ ପେଜ୍ ବଦଳାଇବା ପାଇଁ।</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 24: Reset Position (🔄)</summary>
+            <div id="step24-en">
+                <p>Click 🔄 to fit canvas to screen if zoomed.</p>
+            </div>
+            <div id="step24-odia" class="hidden">
+                <p>🔄 କ୍ଲିକ୍ କରନ୍ତୁ ଜୁମ୍ ହୋଇଥିଲେ କ୍ୟାନ୍ଭାସ୍ ସ୍କ୍ରିନ୍କୁ ଫିଟ୍ କରିବା ପାଇଁ।</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 25: New Page (➕)</summary>
+            <div id="step25-en">
+                <p>Click ➕ to add blank page. Use selector to jump pages.</p>
+            </div>
+            <div id="step25-odia" class="hidden">
+                <p>➕ କ୍ଲିକ୍ କରନ୍ତୁ ବଙ୍କ ପେଜ୍ ଯୋଡ଼ିବା ପାଇଁ। ସିଲେକ୍ଟର୍ ବ୍ୟବହାର ପେଜ୍ ଜମ୍ପ୍ କରିବା ପାଇଁ।</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 26: Clear Current Page (🗑️)</summary>
+            <div id="step26-en">
+                <p>Click 🗑️ to erase page. Empty pages auto-remove if not first.</p>
+            </div>
+            <div id="step26-odia" class="hidden">
+                <p>🗑️ କ୍ଲିକ୍ କରନ୍ତୁ ପେଜ୍ ମାରିବା ପାଇଁ। ଖାଲି ପେଜ୍ ଅଟୋ-ରିମୁଭ୍ ହୁଏ ଯଦି ପ୍ରଥମ ନୁହେଁ।</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 27: Previous/Next Page</summary>
+            <div id="step27-en">
+                <p>Click Previous/Next or swipe in lock mode to flip pages.</p>
+            </div>
+            <div id="step27-odia" class="hidden">
+                <p>Previous/Next କ୍ଲିକ୍ କରନ୍ତୁ କିମ୍ବା ଲକ୍ ମୋଡ୍ରେ ସ୍ୱାଇପ୍ ପେଜ୍ ଫ୍ଲିପ୍ କରିବା ପାଇଁ।</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 28: Save as JPG (🖼️)</summary>
+            <div id="step28-en">
+                <p>Click 🖼️ to download current page as image. High quality!</p>
+            </div>
+            <div id="step28-odia" class="hidden">
+                <p>🖼️ କ୍ଲିକ୍ କରନ୍ତୁ ପ୍ରସ୍ତୁତ ପେଜ୍କୁ ଇମେଜ୍ ଡାଉନଲୋଡ୍ କରିବା ପାଇଁ। ଉଚ୍ଚ କ୍ୱାଲିଟି!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 29: Share as PDF (📄)</summary>
+            <div id="step29-en">
+                <p>Click 📄 to make multi-page PDF of all drawings. Watch progress!</p>
+            </div>
+            <div id="step29-odia" class="hidden">
+                <p>📄 କ୍ଲିକ୍ କରନ୍ତୁ ସବୁ ଆଙ୍କନ୍ତୁର ମଲ୍ଟି-ପେଜ୍ PDF ତିଆରି କରିବା ପାଇଁ। ପ୍ରୋଗ୍ରେସ୍ ଦେଖନ୍ତୁ!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Step 30: Fun Gestures (Touch Only)</summary>
+            <div id="step30-en">
+                <p>4 fingers: Random color! Everything auto-saves.</p>
+            </div>
+            <div id="step30-odia" class="hidden">
+                <p>4 ଆଙ୍ଗୁଳି: ରାଣ୍ଡମ୍ କଲର୍! ସବୁ ସ୍ୱୟଂଚାଳିତ ସେଭ୍।</p>
+            </div>
+        </details>
+    </section>
+
+    <section id="advanced">
+        <h2><span class="emoji">⭐</span>Advanced Features</h2>
+        <details>
+            <summary>Tooltips & Progress Bar</summary>
+            <div id="adv1-en">
+                <p>Hover/click buttons for tooltips (pop-up hints). Progress bar shows when loading files.</p>
+            </div>
+            <div id="adv1-odia" class="hidden">
+                <p>ବଟନ୍ ଉପରେ ହୋଭର୍/କ୍ଲିକ୍ ଟୁଲ୍ଟିପ୍ (ପପ୍-ଅପ୍ ହିଣ୍ଟ୍) ପାଇଁ। ଫାଇଲ୍ ଲୋଡିଂ ସମୟରେ ପ୍ରୋଗ୍ରେସ୍ ବାର୍ ଦେଖାଏ।</p>
+            </div>
+        </details>
+        <details>
+            <summary>PDF Magic</summary>
+            <div id="adv2-en">
+                <p>Open PDF: If text, loads to Write. If no text, loads pages to Draw (locked). Draw on PDF!</p>
+            </div>
+            <div id="adv2-odia" class="hidden">
+                <p>PDF ଖୋଲନ୍ତୁ: ଯଦି ଟେକ୍ସଟ୍, Writeରେ ଲୋଡ୍ ହୁଏ। ଯଦି ନାହିଁ, Drawରେ ପେଜ୍ ଲୋଡ୍ (ଲକ୍ଡ୍)। PDF ଉପରେ ଆଙ୍କନ୍ତୁ!</p>
+            </div>
+        </details>
+    </section>
+
+    <footer>
+        <p><span class="emoji">❤️</span> Made with love for kids! Have fun creating!<span class="emoji">❤️</span></p>
+    </footer>
+
+    <script>
+        function switchLang(lang) {
+            const buttons = document.querySelectorAll('.lang-switch button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const sections = ['intro', 'step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8', 'step9', 'step10', 'step11', 'step12', 'step13', 'step14', 'step15', 'step16', 'step17', 'step18', 'step19', 'step20', 'step21', 'step22', 'step23', 'step24', 'step25', 'step26', 'step27', 'step28', 'step29', 'step30', 'features', 'adv1', 'adv2'];
+            sections.forEach(sec => {
+                const en = document.getElementById(sec + '-en');
+                const od = document.getElementById(sec + '-odia');
+                if (lang === 'en') {
+                    en.classList.remove('hidden');
+                    if (od) od.classList.add('hidden');
+                } else {
+                    if (en) en.classList.add('hidden');
+                    od.classList.remove('hidden');
+                }
+            });
+        }
+
+        // Close all details on load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('details').forEach(detail => detail.open = false);
+        });
+    </script>
+</body>
+</html>
